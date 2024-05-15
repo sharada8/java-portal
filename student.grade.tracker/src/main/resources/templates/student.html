@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+ <script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+</head>
+<body>
+<div>
+	<h2>STUDENTS</h2>
+	<!-- <tr>
+	<div align="left">
+		<h3><a  th:href="@{'/course/addcourse'}">Add new Student</a>	
+	</div>
+	</tr>
+	 -->
+	<div class="col-sm-8" align = "center">
+        <div class="panel-body" align = "center" >
+        
+     <table class="table">
+     <thead class="thead-dark">
+     <tr>
+     	<th>id</th>
+     	<th>student name</th>
+     	<th>grade</th>
+     	<th>gole</th>
+     	<td> <td clospan="2"><a class="btn btn-info" th:href="@{/student/}">BACK</a></td>
+     </tr>
+     </thead>
+     <tbody>
+     <tr th:each="teacher:${listteacher}">
+     	<td th:text="${teacher.id}"> student ID</td>
+     	<td th:text="${teacher.studentname}"> student Name</td>
+     	<td th:text="${teacher.grade}"> Grade</td>
+     	<td th:text="${teacher.gole}">Gole</td>
+     </tbody>
+     </table>
+    </div>
+    </div>
+   </tr> 
+   </div>
+    
+</body>
+</html>

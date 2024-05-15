@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+ <script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+</head>
+<body>
+<div align="center">
+    <h1>Login for Teacher</h1>
+    <br />
+     <div class="col-sm-4">
+    <form name="myForm" action="#" th:action="@{/student/teacher}" th:object="${teacher}" method="post">
+	<div alight="left">
+ 			<tr>
+ 				 <label class="form-label" >College Code</label>
+                <td>
+	                <input type="text" name="ccode" placeholder="enter college code">
+	                
+	              
+	            <!--      <input type="text" name="tname" placeholder="enter faculty name"> -->
+	          
+                </td>
+            </tr>
+         </div>   
+         <br>
+         <div alight="left">
+ 			<tr>
+ 				 <label class="form-label" >faculty name</label>
+                <td>
+	                 <input type="text" name="tname" placeholder="enter faculty name">
+	          
+                </td>
+            </tr>
+         </div>   
+         <tr>
+         <td clospan="2"><button type="submit" class="btn btn-info">login</button></td>
+         <td clospan="2"><a class="btn btn-info" th:href="@{/student/}">BACK</a>
+         </tr>
+     </form>
+     </div>
+
+</body>
+</html>
