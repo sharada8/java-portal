@@ -15,6 +15,14 @@ public class Teacher {
 	private String studentname;
 	private String grade;
 	private String gole;
+	private Integer gpa;
+	
+	public Integer getGpa() {
+		return gpa;
+	}
+	public void setGpa(Integer gpa) {
+		this.gpa = gpa;
+	}
 	public Integer getId() {
 		return id;
 	}

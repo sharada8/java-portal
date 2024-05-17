@@ -25,7 +25,9 @@
      	<th>student name</th>
      	<th>grade</th>
      	<th>gole</th>
+     	<th>gpa</th>
      	<td> <td clospan="2"><a class="btn btn-info" th:href="@{/student/}">BACK</a></td>
+     	<td> <td clospan="2"><a class="btn btn-info" th:href="@{/student/graph}">GRAPH</a></td>
      </tr>
      </thead>
      <tbody>
@@ -34,6 +36,7 @@
      	<td th:text="${teacher.studentname}"> student Name</td>
      	<td th:text="${teacher.grade}"> Grade</td>
      	<td th:text="${teacher.gole}">Gole</td>
+     	<td th:text="${teacher.gpa}">gpa</td>
      </tbody>
      </table>
     </div>

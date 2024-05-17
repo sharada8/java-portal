@@ -1,9 +1,11 @@
 package com.example.demo.service;
 
+import java.util.Collection;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
 
 import com.example.demo.model.Teacher;
 import com.example.demo.repository.StudentRepository;
@@ -32,6 +34,16 @@ public class StudentService {
 		repo.deleteById(id);
 		// TODO Auto-generated method stub
 		
+	}
+
+//	public Collection<Teacher> getAllteacher1(Model model) {
+//		// TODO Auto-generated method stub
+//		return repo.findAll(model);
+//	}
+
+	public Collection<Teacher> getAllteacher() {
+		// TODO Auto-generated method stub
+		return repo.findAll();
 	}
 
 

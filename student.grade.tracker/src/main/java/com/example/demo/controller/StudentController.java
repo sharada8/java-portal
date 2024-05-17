@@ -1,6 +1,8 @@
-package com.example.demo.controller;
+	package com.example.demo.controller;
 
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -81,4 +83,20 @@ public class StudentController {
 	        service.delete(id);
 	        return new ModelAndView("redirect:/student/teacher");
 	    }
+	  
+//	  @RequestMapping("/graph")
+//	  public ModelAndView graph() {
+//		  return new ModelAndView("graph");
+//	  }
+	  
+	  @RequestMapping("/graph")
+		public String getAllteacher(Model model) {	
+		  List<String> stdname=service.getAllteacher().stream().map(x->x.getStudentname()).collect(Collectors.toList());
+		  List<Integer> gpa=service.getAllteacher().stream().map(x->x.getGpa()).collect(Collectors.toList());
+//			List<Integer> grades = Arrays.asList(10,40,20); 
+		model.addAttribute("studentname", stdname);
+		model.addAttribute("gpa", gpa);
+		return "graph.html";
+		
+		}
 }

@@ -45,8 +45,20 @@
             </tr>
          </div>
     <br>
+    
+      <div alight="left">
+ 			<tr>
+ 				 <label class="form-label" >GPA</label>
+                <td>
+	                <input type="hidden" th:field="*{id}" />
+	                <input type="text" th:field="*{gpa}" class="form-control" placeholder="gpa" />
+                </td>
+            </tr>
+         </div>
+    <br>
     		 <tr>
             <td colspan="2"><button type="submit" class="btn btn-info">save</button> </td>
+            <td> <td clospan="2"><a class="btn btn-info" th:href="@{/student/}">BACK</a></td>
             </tr>
     </form>
     </div>

@@ -26,6 +26,7 @@
      	<th>student name</th>
      	<th>grade</th>
      	<th>gole</th>
+     	<th>GPA</th>
      	<th>edit</th>
      	<th>delete</th>
      </tr>
@@ -36,7 +37,7 @@
      	<td th:text="${teacher.studentname}"> student Name</td>
      	<td th:text="${teacher.grade}"> Grade</td>
      	<td th:text="${teacher.gole}">Gole</td>
-     	
+      	<td th:text="${teacher.gpa}">GPA</td>     	
      	<td>
      			<a th:href="@{'/student/edit/'+${teacher.id}}">Edit</a>
      	</td>
